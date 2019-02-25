@@ -66,4 +66,23 @@ button:hover, button:focus{
     transition: 0.75s;
     background-color: rgb(196, 134, 235);
 }
-
+#content-wrapper{
+    position: relative;
+    height: 320px;
+}
+#epic-head{
+    position: absolute;
+    right: 189px;
+    top: 0px; 
+}
+#login-form{
+    margin-top: 220px; 
+}
+#login-form::before{
+    content: " ";
+    display: block;
+    height: 90px;
+}
+#forgot-pass{
+    text-align: center;
+}
