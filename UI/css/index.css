@@ -21,7 +21,7 @@ h1{
     height: 480px;
     padding-top: 40px;
 }
-#wrapper .inputs{
+.inputs{
     display: block;
     margin: 20px auto;
     width: 320px;
@@ -34,11 +34,11 @@ h1{
     padding-left:  20px;
     font-weight: bold;
     color: rgb(134, 139, 235);
-}
-#wrapper .inputs::placeholder{
+} 
+.inputs::placeholder{
     color: rgb(134, 139, 235);
 }
-#wrapper .inputs:hover, #wrapper .inputs:focus{
+.inputs:hover, #wrapper .inputs:focus{
     transform: translateY(2px);
    border-bottom: 2px solid rgb(196, 134, 235);
     transition: 0.75s;
