@@ -4,19 +4,24 @@
 	<head>
 		<title>Epic signUp Page</title>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="initial-scale=1.0">
+		<meta name="viewport" content=" width=device-width, initial-scale=1.0">
+        <link href="css/signup.css" type="text/css" rel="stylesheet">
 	</head>
 
 	<body>
         <h1>EPIC SIGN UP</h1>
          <div id="wrapper">
              <form> 
-                 <input type="text" name="firstname" placeholder="Firstname" value="" required>
-                 <input type="text" name="surname" placeholder="Surname" value="" required>
-                 <input type="text" name="username" placeholder="Username" value="" required>
-                 <input type="text" name="phone" placeholder="phone  +234XXXXXX" value="" required>
-                 <input type="password" name="pass" placeholder="Password" required>
-                 <input type="password" name="confirm-pass" placeholder="Confirm password" required>
+                 <input type="text" name="firstname" placeholder="Firstname" value="" required class="inputs">
+                 <input type="text" name="surname" placeholder="Surname" value="" required class="inputs">
+                 <input type="text" name="username" placeholder="Username" value="" required class="inputs" maxlength="8">
+                 <input type="text" name="phone" placeholder="phone  +234XXXXXXXXXX" value="" required class="inputs">
+                 <input type="password" name="pass" placeholder="Password" required class="inputs">
+                 <input type="password" name="confirm-pass" placeholder="Confirm password" required class="inputs">
+                <div id="agreement-wrapper">
+                 <input type="checkbox"  id="agreement"> 
+                 <label for="agreement">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</label>
+                     </div>
                  <button type="submit">SignUp</button>
              </form>
         </div>
