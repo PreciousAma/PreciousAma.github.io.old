@@ -199,12 +199,28 @@ input[type=search]::placeholder, #compose input::placeholder{
     border-radius: 10px; 
     outline: none;
     font-size: 14px;
-    padding-left:  20px;
+    padding-left:  10px;
     font-weight: bold;
     color: rgb(134, 139, 235);
+    margin-top: 26px; 
 }
-button#close-btn{
-    
+.toggle{
+    width: 25px;
+    height: 25px;
+    background-color: skyblue;
+    border: none;
+    outline: none;
 }
-
+.toggle img{
+    width: 25px;
+    height: 25px;
+}
+.toggle:hover{
+    transform: translateY(1px);
+}
+#compose-display-toggle{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
 
