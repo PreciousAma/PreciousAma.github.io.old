@@ -160,6 +160,7 @@ input[type=search]::placeholder, #compose input::placeholder{
     width: 420px;
     height: 420px;
     border: 1px solid grey;
+    opacity: 0.95;
 }
 
 #compose #message-box{
@@ -175,9 +176,11 @@ input[type=search]::placeholder, #compose input::placeholder{
     font-family: 'Times New Roman';
     text-align: justify;
     font-size: 15px;
+    opacity: 1;
 }
 #compose #message-box::-webkit-scrollbar{
     width: 9px;
+    opacity: 1;
 }
 #compose #message-box::-webkit-scrollbar-track {
     border-radius: 9px;
@@ -191,6 +194,7 @@ input[type=search]::placeholder, #compose input::placeholder{
     font-weight: bold;
     margin: 2px;
     color:  rgb(134, 139, 235);
+    opacity: 1;
 }
 #compose input{
     width: 80%;
@@ -203,6 +207,7 @@ input[type=search]::placeholder, #compose input::placeholder{
     font-weight: bold;
     color: rgb(134, 139, 235);
     margin-top: 26px; 
+    opacity: 1;
 }
 .toggle{
     width: 25px;
@@ -210,10 +215,12 @@ input[type=search]::placeholder, #compose input::placeholder{
     background-color: skyblue;
     border: none;
     outline: none;
+    opacity: 1;
 }
 .toggle img{
     width: 25px;
     height: 25px;
+    opacity: 1;
 }
 .toggle:hover{
     transform: translateY(1px);
@@ -221,6 +228,20 @@ input[type=search]::placeholder, #compose input::placeholder{
 #compose-display-toggle{
     display: inline-block;
     position: absolute;
+    opacity: 1;
     right: 0;
 }
-
+#send-btn-wrapper{
+    position: relative;
+}
+#send{
+     background-color: skyblue;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 2px;
+    opacity: 1;
+}
+#send:hover{
+    transform: translateX(1px);
+}
