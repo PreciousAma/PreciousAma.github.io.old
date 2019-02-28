@@ -6,6 +6,7 @@ body{
     background-color: #F0F0F0; 
     background-color:azure;
     color: white;
+    font-family: 'Times New Roman' 
 }
 #user-wrapper{
     position: relative;
@@ -141,8 +142,27 @@ input[type=search]::placeholder, #compose input::placeholder{
       background:skyblue;
       border-radius: 9px;
 }
+.main-tab-opt{
+    text-align: center;
+    padding-top: 30%;
+    font-size: 32px;
+    font-style: oblique;
+    color: darkgray;
+}
+#inbox{
+/*    display:none;*/
+}
+#sent-mail{
+     display:none;
+}
+#drafts{
+    display:none;
+}
+#Groups{
+    display:none;
+}
 #compose-wrapper{
-/*    display: none;*/
+    display: none;
     position: absolute;
     width: 420px;
     height: 420px;
@@ -246,7 +266,7 @@ input[type=search]::placeholder, #compose input::placeholder{
     transform: translateX(1px);
 }
 #email-suggestion{
-    display: none;
+/*    display: none;*/
     position: absolute;
     width: 80%;
     height: 100px; 
