@@ -71,7 +71,7 @@ input[type=search]::placeholder, #compose input::placeholder{
     right: 0;
     position: absolute;
 }
-#app-bar-options li{
+.app-bar-options li{
     list-style: none;
     display: inline-block;
     margin: 0 18px; 
@@ -80,9 +80,12 @@ input[type=search]::placeholder, #compose input::placeholder{
     letter-spacing: 1.5px;
     cursor:context-menu;
 }
-#app-bar-options li:hover, .app-active{ 
+.app-bar-options li:hover{  
     border-bottom: 2px solid rgb(134, 139, 235);  
 } 
+app-active{ 
+    border-bottom: 2px solid rgb(134, 139, 235);  
+}  
 #sidebar{
     height: 88.7vh;
     width: 25%;
@@ -92,7 +95,7 @@ input[type=search]::placeholder, #compose input::placeholder{
     position: absolute;
     top: 43px;
 }
-#sidebar button{
+.btn{
     display: block;
     margin:20px 0 20px 12px; 
     width:140px;
@@ -103,13 +106,14 @@ input[type=search]::placeholder, #compose input::placeholder{
     color: white;
     background-color: rgb(134, 139, 235);
     outline: none;
+    border-radius: 2px;
     transition: 0.5s;
 }
-#sidebar button:first-child{
+.btn:first-child{
     margin-top: 30px;
 }
-#sidebar button:hover, .button-clicked{
-    background-color: rgb(196, 134, 235);  
+.btn:hover, .btn:focus{ 
+    background-color: rgb(196, 134, 235); 
     transform: translateX(3px);
 }
 #sidebar a{
@@ -149,8 +153,15 @@ input[type=search]::placeholder, #compose input::placeholder{
     font-style: oblique;
     color: darkgray;
 }
+.location{
+    text-align: center;
+    font-family:  cursive;
+    color: darkgray;
+    
+}
 #inbox{
 /*    display:none;*/
+   
 }
 #sent-mail{
      display:none;
@@ -158,8 +169,14 @@ input[type=search]::placeholder, #compose input::placeholder{
 #drafts{
     display:none;
 }
-#Groups{
+#groups{
     display:none;
+}
+#admin{
+    display: none;
+}
+.hide-display{
+    display: none
 }
 #compose-wrapper{
     display: none;
@@ -186,9 +203,9 @@ input[type=search]::placeholder, #compose input::placeholder{
 #compose #message-box{
     border-top: 1px solid grey;
     width: 100%;
-    height: 300px;
+    height: 73%;
     margin-top:10px; 
-    padding-top: 4px;
+    padding: 7px;
     resize: none;
     outline: none;
     box-sizing: border-box;
@@ -197,6 +214,9 @@ input[type=search]::placeholder, #compose input::placeholder{
     text-align: justify;
     font-size: 15px;
     opacity: 1;
+}
+.group-manage-btn{
+    
 }
 #compose #message-box::-webkit-scrollbar{
     width: 9px;
@@ -266,7 +286,7 @@ input[type=search]::placeholder, #compose input::placeholder{
     transform: translateX(1px);
 }
 #email-suggestion{
-/*    display: none;*/
+    display: none;
     position: absolute;
     width: 80%;
     height: 100px; 
@@ -281,6 +301,7 @@ input[type=search]::placeholder, #compose input::placeholder{
     box-shadow:  1px 1px 3px 2px grey; 
     border-radius: 0 0 4px 4px;    
 }
+
 #email-suggestion::-webkit-scrollbar{
     width: 9px;
     opacity: 1;

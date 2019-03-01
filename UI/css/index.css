@@ -93,5 +93,37 @@ button:hover, button:focus{
 .forgot-pass{
     text-align: center;
     padding: 10px;
+    position: relative;
+}
+.forgot-pass-container{
+    position: absolute;
+    display: none;
+    box-sizing: border-box;
+    padding-top: 20px;
+    top: -206px;
+    left:135.5px; 
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,1);
+} 
+.popup-toggle{
+    display: block; 
+} 
+.forgot-pass-container button{
+    display: inline-block;
+    margin-top: 0;
 }
 
+.forgot-pass-container::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border:15px solid transparent ;
+    border-top-color: rgba(0,0,0,1);
+    bottom: -30px;
+    left: 50%;
+}
+.forgot-pass-container p{
+    font-family:  cursive; 
+}
