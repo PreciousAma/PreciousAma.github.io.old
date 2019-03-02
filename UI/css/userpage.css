@@ -6,6 +6,7 @@ body{
     background-color: #F0F0F0; 
     background-color:azure;
     color: white;
+    font-family: 'Times New Roman' 
 }
 #user-wrapper{
     position: relative;
@@ -40,7 +41,7 @@ input[type=search]{
     font-weight: bold;
     color: rgb(134, 139, 235);
 }
-input[type=search]::placeholder{ 
+input[type=search]::placeholder, #compose input::placeholder{ 
     color: rgb(134, 139, 235);
 }
 #search-block button{
@@ -70,7 +71,7 @@ input[type=search]::placeholder{
     right: 0;
     position: absolute;
 }
-#app-bar-options li{
+.app-bar-options li{
     list-style: none;
     display: inline-block;
     margin: 0 18px; 
@@ -79,9 +80,12 @@ input[type=search]::placeholder{
     letter-spacing: 1.5px;
     cursor:context-menu;
 }
-#app-bar-options li:hover, .app-active{ 
+.app-bar-options li:hover{  
     border-bottom: 2px solid rgb(134, 139, 235);  
 } 
+app-active{ 
+    border-bottom: 2px solid rgb(134, 139, 235);  
+}  
 #sidebar{
     height: 88.7vh;
     width: 25%;
@@ -91,7 +95,7 @@ input[type=search]::placeholder{
     position: absolute;
     top: 43px;
 }
-#sidebar button{
+.btn{
     display: block;
     margin:20px 0 20px 12px; 
     width:140px;
@@ -102,16 +106,20 @@ input[type=search]::placeholder{
     color: white;
     background-color: rgb(134, 139, 235);
     outline: none;
+    border-radius: 2px;
     transition: 0.5s;
 }
-#sidebar button:first-child{
+.btn:first-child{
     margin-top: 30px;
 }
-#sidebar button:hover, .button-clicked{
-    background-color: rgb(196, 134, 235);  
+.btn:hover, .btn:focus{ 
+    background-color: rgb(196, 134, 235); 
     transform: translateX(3px);
 }
-#main-tab{
+#sidebar a{
+    text-decoration: none;
+}
+.main-tab{
     width: 73.5%;
     height: 84vh;
     background-color: white;
@@ -128,15 +136,180 @@ input[type=search]::placeholder{
 
 /*   clip-path: polygon(3% 0, 100% 0, 100% 0%, 100% 100%, 100% 100%, 3% 100%,0% 97%, 0 3%); */
 }
-#main-tab::-webkit-scrollbar {
+.main-tab::-webkit-scrollbar {
     width: 9px; 
 }
-#main-tab::-webkit-scrollbar-track {
+.main-tab::-webkit-scrollbar-track {
     border-radius: 9px;
 }
-#main-tab::-webkit-scrollbar-thumb {
+.main-tab::-webkit-scrollbar-thumb {
       background:skyblue;
       border-radius: 9px;
 }
+.main-tab-opt{
+    text-align: center;
+    padding-top: 30%;
+    font-size: 32px;
+    font-style: oblique;
+    color: darkgray;
+}
+.location{
+    text-align: center;
+    font-family:  cursive;
+    color: darkgray;
+    
+}
+#inbox{
+/*    display:none;*/
+   
+}
+#sent-mail{
+     display:none;
+}
+#drafts{
+    display:none;
+}
+#groups{
+    display:none;
+}
+#admin{
+    display: none;
+}
+.hide-display{
+    display: none
+}
+#compose-wrapper{
+    display: none;
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: 5px;
+    bottom: 0;
+    box-sizing: border-box;
+    box-sizing: border-box;
+        
+}
+#compose{
+    position: fixed;
+    box-sizing: border-box;
+    background-color:skyblue;
+    z-index: 1;
+    width: 420px;
+    height: 420px;
+    border: 1px solid grey;
+    opacity: 0.95;
+}
 
+#compose #message-box{
+    border-top: 1px solid grey;
+    width: 100%;
+    height: 73%;
+    margin-top:10px; 
+    padding: 7px;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    overflow: auto;
+    font-family: 'Times New Roman';
+    text-align: justify;
+    font-size: 15px;
+    opacity: 1;
+}
+.group-manage-btn{
+    
+}
+#compose #message-box::-webkit-scrollbar{
+    width: 9px;
+    opacity: 1;
+}
+#compose #message-box::-webkit-scrollbar-track {
+    border-radius: 9px;
+}
+#compose #message-box::-webkit-scrollbar-thumb {
+      background:skyblue;
+      border-radius: 9px;
+}
+#compose label{
+    font-family: Arial;
+    font-weight: bold;
+    margin: 2px;
+    color:  rgb(134, 139, 235);
+    opacity: 1;
+}
+#compose input{
+    width: 80%;
+    height: 36px; 
+    border: solid 1px transparent;
+    outline: none;
+    font-size: 14px;
+    padding-left:  10px;
+    font-weight: bold;
+    color: rgb(134, 139, 235);
+    border-radius: 3px;
+    margin-top: 26px; 
+    opacity: 1;
+}
+.toggle{
+    width: 25px;
+    height: 25px;
+    background-color: skyblue;
+    border: none;
+    outline: none;
+    opacity: 1;
+}
+.toggle img{
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+}
+.toggle:hover{
+    transform: translateY(1px);
+}
+#compose-display-toggle{
+    display: inline-block;
+    position: absolute;
+    opacity: 1;
+    right: 0;
+}
+#send-btn-wrapper{
+    position: relative;
+}
+#send{
+     background-color: skyblue;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 2px;
+    opacity: 1;
+}
+#send:hover{
+    transform: translateX(1px);
+}
+#email-suggestion{
+    display: none;
+    position: absolute;
+    width: 80%;
+    height: 100px; 
+    background-color: white;
+    z-index: 1;
+    left: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: auto;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-top: 1px solid transparent;
+    box-shadow:  1px 1px 3px 2px grey; 
+    border-radius: 0 0 4px 4px;    
+}
 
+#email-suggestion::-webkit-scrollbar{
+    width: 9px;
+    opacity: 1;
+}
+#email-suggestion::-webkit-scrollbar-track {
+    border-radius: 9px;
+}
+#email-suggestion::-webkit-scrollbar-thumb {
+      background:skyblue;
+      border-radius: 9px;
+}
